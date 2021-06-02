@@ -2,136 +2,149 @@ package MíticoSC;
 
 public class CCuenta {
 
+	private String nombre;
 
+	private String cuenta;
 
-    private String nombre;
+	private double saldo;
 
-    private String cuenta;
+	private double tipoInteres;
 
-    private double saldo;
+	public CCuenta() {
+	}
 
-    private double tipoInteres;
+	public CCuenta(String nom, String cue, double sal, double tipo)
 
+	{
 
+		this.nombre = nom;
 
-    public CCuenta()
+		this.cuenta = cue;
 
-    {
+		this.saldo = sal;
 
-    }
+		this.tipoInteres = tipo;
 
+	}
 
-    public CCuenta(String nom, String cue, double sal, double tipo)
+	public void asignarNombre(String nom)
 
-    {
+	{
 
-        nombre =nom;
+		setNombre(nom);
 
-        cuenta=cue;
+	}
 
-        saldo=sal;
+	public String obtenerNombre()
 
-    }
+	{
 
+		return getNombre();
 
-    public void asignarNombre(String nom)
+	}
 
-    {
+	public double estado()
 
-        setNombre(nom);
+	{
 
-    }
+		return getSaldo();
 
+	}
 
-    public String obtenerNombre()
+	public void ingresar(double cantidad) throws Exception
 
-    {
+	{
 
-        return getNombre();
+		if (cantidad < 0)
 
-    }
+			throw new Exception("No se puede ingresar una cantidad negativa");
 
+		saldo = saldo + cantidad;
 
+	}
 
-    public double estado()
+	public void retirar(double cantidad) throws Exception
 
-    {
+	{
 
-        return saldo;
+		if (cantidad <= 0)
 
-    }
+			throw new Exception("No se puede retirar una cantidad negativa");
 
+		if (estado() < cantidad)
 
+			throw new Exception("No se hay suficiente saldo");
 
-    public void ingresar(double cantidad) throws Exception
+		saldo = saldo - cantidad;
 
-    {
+	}
 
-        if (cantidad<0)
+	public String obtenerCuenta()
 
-            throw new Exception("No se puede ingresar una cantidad negativa");
+	{
 
-        saldo = saldo + cantidad;
+		return getCuenta();
 
-    }
+	}
 
+	public String getNombre() {
 
-    public void retirar(double cantidad) throws Exception
+		return nombre;
 
-    {
+	}
 
-        if (cantidad <= 0)
+	public void setNombre(String nombre) {
 
-            throw new Exception ("No se puede retirar una cantidad negativa");
+		this.nombre = nombre;
 
-        if (estado()< cantidad)
+	}
 
-            throw new Exception ("No se hay suficiente saldo");
+	public double getTipoInteres() {
 
-        saldo = saldo - cantidad;
+		return tipoInteres;
 
-    }
+	}
 
+	public double tipoInteres() {
 
+		return getTipoInteres();
 
-    public String obtenerCuenta()
+	}
 
-    {
+	public void setTipoInteres(double tipoInteres) {
 
-        return cuenta;
+		this.tipoInteres = tipoInteres;
 
-    }
+	}
 
+	public void cambiarTipoInteres(double tipoInteres) {
 
+		setTipoInteres(tipoInteres);
 
-    public String getNombre() {
+	}
 
-        return nombre;
+	public String getCuenta() {
+		return cuenta;
+	}
 
-    }
+	public void setCuenta(String cuenta) {
+		this.cuenta = cuenta;
+	}
 
+	public void cambiarCuenta(String cuenta) {
+		setCuenta(cuenta);
+	}
 
+	public double getSaldo() {
+		return saldo;
+	}
 
-    public void setNombre(String nombre) {
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 
-        this.nombre = nombre;
-
-    }
-
-
-
-    public double getTipoInteres() {
-
-        return tipoInteres;
-
-    }
-
-
-
-    public void setTipoInteres(double tipoInteres) {
-
-        this.tipoInteres = tipoInteres;
-
-    }
+	public void cambiarSaldo(double saldo) {
+		setSaldo(saldo);
+	}
 
 }
