@@ -1,48 +1,61 @@
 package MíticoSC;
 
+/**
+ * 
+ * @author Mario Cerezo González
+ * @version 1.0
+ * @since 01/06/21
+ *
+ */
+
 public class Main {
 
+	/**
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
 
-    public static void main(String[] args) {
+		CCuenta cuentaUno;
 
-        CCuenta cuentaUno;
+		double saldoActual;
 
-        double saldoActual;
+		cuentaUno = new CCuenta("Antonio López", "1000-2365-85-1230456789", 2500, 0);
 
+		saldoActual = cuentaUno.estado();
 
-        cuentaUno = new CCuenta("Antonio López","1000-2365-85-1230456789",2500,0);
+		System.out.println("El saldo actual es" + saldoActual);
 
-        saldoActual = cuentaUno.estado();
+		operacuenta(cuentaUno);
 
-        System.out.println("El saldo actual es"+ saldoActual );
+	}
 
-
-        operacuenta(cuentaUno);
-
-    }
-
+	/**
+	 * 
+	 * @param cuentaUno
+	 */
 	private static void operacuenta(CCuenta cuentaUno) {
 		try {
 
-            cuentaUno.retirar(2300);
+			cuentaUno.retirar(2300);
 
-        } catch (Exception e) {
+		} catch (Exception e) {
 
-            System.out.print("Fallo al retirar");
+			System.out.print("Fallo al retirar");
 
-        }
+		}
 
-        try {
+		try {
 
-            System.out.println("Ingreso en cuenta");
+			System.out.println("Ingreso en cuenta");
 
-            cuentaUno.ingresar(695);
+			cuentaUno.ingresar(695);
 
-        } catch (Exception e) {
+		} catch (Exception e) {
 
-            System.out.print("Fallo al ingresar");
+			System.out.print("Fallo al ingresar");
 
-        }
+		}
 	}
 
 }

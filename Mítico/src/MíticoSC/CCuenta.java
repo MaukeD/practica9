@@ -1,5 +1,13 @@
 package MíticoSC;
 
+/**
+ * 
+ * @author Mario Cerezo González
+ * @version 1.0
+ * @since 01/06/21
+ *
+ */
+
 public class CCuenta {
 
 	private String nombre;
@@ -13,6 +21,13 @@ public class CCuenta {
 	public CCuenta() {
 	}
 
+	/**
+	 * 
+	 * @param nom
+	 * @param cue
+	 * @param sal
+	 * @param tipo
+	 */
 	public CCuenta(String nom, String cue, double sal, double tipo)
 
 	{
@@ -27,6 +42,10 @@ public class CCuenta {
 
 	}
 
+	/**
+	 * 
+	 * @param nom
+	 */
 	public void asignarNombre(String nom)
 
 	{
@@ -35,6 +54,10 @@ public class CCuenta {
 
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String obtenerNombre()
 
 	{
@@ -43,6 +66,10 @@ public class CCuenta {
 
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public double estado()
 
 	{
@@ -51,6 +78,11 @@ public class CCuenta {
 
 	}
 
+	/**
+	 * 
+	 * @param cantidad
+	 * @throws Exception
+	 */
 	public void ingresar(double cantidad) throws Exception
 
 	{
@@ -63,6 +95,11 @@ public class CCuenta {
 
 	}
 
+	/**
+	 * 
+	 * @param cantidad
+	 * @throws Exception
+	 */
 	public void retirar(double cantidad) throws Exception
 
 	{
@@ -79,6 +116,10 @@ public class CCuenta {
 
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String obtenerCuenta()
 
 	{
@@ -87,62 +128,110 @@ public class CCuenta {
 
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getNombre() {
 
 		return nombre;
 
 	}
 
+	/**
+	 * 
+	 * @param nombre
+	 */
 	public void setNombre(String nombre) {
 
 		this.nombre = nombre;
 
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public double getTipoInteres() {
 
 		return tipoInteres;
 
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public double tipoInteres() {
 
 		return getTipoInteres();
 
 	}
 
+	/**
+	 * 
+	 * @param tipoInteres
+	 */
 	public void setTipoInteres(double tipoInteres) {
 
 		this.tipoInteres = tipoInteres;
 
 	}
 
+	/**
+	 * 
+	 * @param tipoInteres
+	 */
 	public void cambiarTipoInteres(double tipoInteres) {
 
 		setTipoInteres(tipoInteres);
 
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getCuenta() {
 		return cuenta;
 	}
 
+	/**
+	 * 
+	 * @param cuenta
+	 */
 	public void setCuenta(String cuenta) {
 		this.cuenta = cuenta;
 	}
 
+	/**
+	 * 
+	 * @param cuenta
+	 */
 	public void cambiarCuenta(String cuenta) {
 		setCuenta(cuenta);
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public double getSaldo() {
 		return saldo;
 	}
 
+	/**
+	 * 
+	 * @param saldo
+	 */
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
 
+	/**
+	 * 
+	 * @param saldo
+	 */
 	public void cambiarSaldo(double saldo) {
 		setSaldo(saldo);
 	}
